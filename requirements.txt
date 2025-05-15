@@ -1,0 +1,16 @@
+Flask
+pandas
+requests
+selenium
+PyMuPDF
+openai
+python-dotenv
+webdriver-manager
+flask
+flask-cors
+langchain
+langchain-community
+langchain-openai
+chromadb
+fastapi
+uvicorn
