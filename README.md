@@ -75,7 +75,17 @@ npm start
 
 ### 📁 Project Structure
 
-<pre> financial_backend/ ├── api/ # Flask REST API │ └── app.py ├── chatbot/ # FastAPI + LangChain chatbot │ ├── app.py │ └── build_index.py ├── client/ # React frontend │ └── src/ ├── scraper/ # PDF scraping utilities │ └── ... ├── chroma_db/ # Vector store directory (auto-generated) ├── Dockerfile # Full-stack build config ├── financial_metrics.csv # Source data ├── main.py # Scraper runner ├── requirements.txt └── .gitignore </pre>
+```bash
+
+financial_backend/
+├── api/             # Flask API
+├── chatbot/         # FastAPI + LangChain chatbot
+├── client/          # React frontend
+├── scraper/         # CSE report downloader
+├── Dockerfile
+├── requirements.txt
+├── README.md
+```
 
 ### 📝 Example Questions for Chatbot
 
