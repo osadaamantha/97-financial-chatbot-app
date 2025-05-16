@@ -75,23 +75,41 @@ npm start
 
 ### 📁 Project Structure
 
-.
-├── api/                  # Flask REST API
-├── chatbot/              # FastAPI + LangChain chatbot
-├── client/               # React frontend
-├── scraper/              # PDF scraping utilities
-├── chroma_db/            # Vector store directory
-├── Dockerfile            # Full-stack build
-├── financial_metrics.csv # Source data
-├── main.py               # Scraper runner
-├── requirements.txt
-└── .gitignore
+<pre> financial_backend/ ├── api/ # Flask REST API │ └── app.py ├── chatbot/ # FastAPI + LangChain chatbot │ ├── app.py │ └── build_index.py ├── client/ # React frontend │ └── src/ ├── scraper/ # PDF scraping utilities │ └── ... ├── chroma_db/ # Vector store directory (auto-generated) ├── Dockerfile # Full-stack build config ├── financial_metrics.csv # Source data ├── main.py # Scraper runner ├── requirements.txt └── .gitignore </pre>
 
 ### 📝 Example Questions for Chatbot
 
 "What is the gross profit for 2022 for DIPPED PRODUCTS PLC?"
 
 "Compare revenue between 2023 and 2024 for REXP."
+
+
+### Local setup (without Docker)
+
+```bash
+
+# Python virtual environment
+python -m venv venv
+source venv/bin/activate
+
+# Install backend dependencies
+pip install -r requirements.txt
+
+# Flask API
+cd api
+python app.py
+
+# FastAPI Chatbot
+cd ../chatbot
+uvicorn app:app --port 8000
+
+# React frontend
+cd ../client
+npm install
+npm start
+```
+
+
 
 Authour
 Amantha
